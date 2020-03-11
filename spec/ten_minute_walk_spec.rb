@@ -12,4 +12,8 @@ describe 'ten minute walk method' do
   it 'returns false if ten steps and not circular' do
     expect(ten_minute_walk(['e','w','n','w','e','w','e','w','e','w'])).to eq(false)
   end
+
+  it 'returns false if not 10 steps and circular' do
+    expect(ten_minute_walk(['e', 'w']))
+  end
 end
